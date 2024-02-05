@@ -8,6 +8,26 @@
 3. Create a db with name **ms-user**
 4. Create a db with name **ms-email**
 
+## How to run
+1. Create a database **ms-user** and **ms-email**
+2. Create a accont in [CouldAMQP](https://www.cloudamqp.com/)
+3. In folder **email** create a .env file
+4. In folder **user** create a .env file
+5. Go to /user and run **mvn spring-boot:run**
+6. Go to /email and run **mvn spring-boot:run**
+
+#### mail/.env
+```
+MAIL_URL=<Your cloudamqp URL>
+USER_EMAIL=<Your email>
+USER_PASSWORD=<Your password app>
+```
+
+#### user/.env
+```
+MAIL_URL=<Your cloudamqp URL>
+```
+
 ## Techs:
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
@@ -23,3 +43,8 @@ This project consists of 2 microservices that communicate with each other. With 
 
 ### Tests
 This project was developed using tests. Two types of tests were created. One using **Mockito** to simulate the behavior of services, and another using a local database **H2**, to simulate the entire process carried out by the service.
+
+# Images:
+![insomnia](https://ik.imagekit.io/mbrites/Captura%20de%20tela%20de%202024-02-05%2016-38-25_9TJ7-Ssw6.png?updatedAt=1707162495432)
+
+![email](https://ik.imagekit.io/mbrites/Captura%20de%20tela%20de%202024-02-05%2016-38-45_2wOopFP1g.png?updatedAt=1707163136025)
